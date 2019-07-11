@@ -5,7 +5,7 @@ const Madlib = sequelize.import('../models/madlib');
 // gets all of a user's madlibs
 router.get('/', (req, res) => {
     Madlib.findAll({where: {owner: req.user.id}})
-    .then(user => res.status(200).json(user))
+    .then(ml => res.status(200).json(ml))
     .catch(err => res.status(500).json({error: err}))
 });
 
