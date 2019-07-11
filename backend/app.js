@@ -12,7 +12,7 @@ var madlib = require('./controllers/madlibcontroller');
 var auth = require('./controllers/authcontroller');
 
 app.use('/auth', auth);   // signup, login
-app.use(require('../middleware/validate-session'));
+app.use(require('./middleware/validate-session'));
 app.use('/user', user);   // update, delete
 app.use('/madlib', madlib);
 

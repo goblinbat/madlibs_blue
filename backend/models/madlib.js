@@ -2,11 +2,15 @@ module.exports = function (sequelize, DataTypes) {
     return sequelize.define('madlib', {
         keyphrase: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         owner: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
+        },
+        savedAs: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         noun1: DataTypes.STRING,
         noun2: DataTypes.STRING,
