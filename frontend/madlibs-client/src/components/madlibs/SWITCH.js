@@ -5,7 +5,7 @@ import React from 'react';
 const SwitchCase = (props) => {
     switch (props.madlib) {
         case "":
-            // call madlib
+            // call madlib {be sure to pass along props.prompt}
             break;
     } 
 }
