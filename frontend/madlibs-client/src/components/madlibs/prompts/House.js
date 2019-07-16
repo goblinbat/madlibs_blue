@@ -4,7 +4,8 @@ import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 const House = (props) => {
     const [prompt, setPrompt] = useState(props.prompt); // determines whether form or prompt will show
 
-    const [building, setBuilding] = useState('My Dream Home')
+    const [savedAs, setSavedAs] = useState('My Dream Home');
+    const [building, setBuilding] = useState('');
     const [number1, setNumber1] = useState('');
     const [adj1, setAdj1] = useState('');
     const [number2, setNumber2] = useState('');
@@ -75,7 +76,7 @@ const House = (props) => {
                 <br />
 
                 <Label htmlFor="room">Room</Label>
-                <Input name="room" value={room} placeholder="room" onChange={(e) => setroom(e.target.value)} />
+                <Input name="room" value={room} placeholder="room" onChange={(e) => setRoom(e.target.value)} />
                 <br />
                 
                 <Label htmlFor="noun1">Noun</Label>
@@ -133,7 +134,7 @@ const House = (props) => {
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 

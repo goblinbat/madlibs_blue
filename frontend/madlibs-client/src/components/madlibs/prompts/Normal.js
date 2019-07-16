@@ -9,7 +9,7 @@ const Normal = (props) => {
     const [verb2, setVerb2] = useState('');
     const [adj1, setAdj1] = useState('');    
     const [food1, setFood1] = useState('');
-    const [Container, setContainer] = useState('');
+    const [container, setContainer] = useState('');
     const [liquid, setLiquid] = useState('');
     const [vehicle, setVehicle] = useState('');
     const [verb3, setVerb3] = useState('');
@@ -30,7 +30,7 @@ const Normal = (props) => {
                 verb2: verb2,
                 adj1: adj1,
                 food1: food1,
-                Container: Container,
+                Container: container,
                 liquid: liquid,
                 vehicle: vehicle,
                 verb3: verb3,
@@ -122,7 +122,7 @@ const Normal = (props) => {
         return (
             <div>
                 I'd say I lead a very normal life. My day starts when I {verb1}. I then {verb2}. For breakfast, I eat {adj1} {food1} and drink a {container} of {liquid}. Then it's time to leave for work. I get in my {vehicle} and {verb3} to my job as a {occupation}. <br/>
-                At work, I {verb4} until noon, at which point I eat more {d} for lunch. I spend the rest of the day {ingVerb}. <br/>
+                At work, I {verb4} until noon, at which point I eat more {food1} for lunch. I spend the rest of the day {ingVerb}. <br/>
                 After work, I return home, eat some {food2} for dinner, and {verb5} until bed. After all that, I sleep soundly until morning, ending my completely normal day.
             </div>
         )
@@ -130,7 +130,7 @@ const Normal = (props) => {
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 

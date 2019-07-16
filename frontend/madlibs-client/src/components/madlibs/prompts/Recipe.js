@@ -127,7 +127,7 @@ const Recipe = (props) => {
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 

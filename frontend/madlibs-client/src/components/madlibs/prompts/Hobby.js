@@ -86,14 +86,14 @@ const Hobby = (props) => {
     const Mprompt = () => {
         return (
             <div>
-                Once upon a time, there were {number1} {noun1}. Of those, only one was {adj1}. This {noun1} was named {name}, and he liked to {verb1}. Every day, he would {adverb} {verb1} before even {ingVerb} his {bodypart}! Eventually, all his friends got fed up with his incessant {verb1}ing, and they issued an ultimatum: stop {verb1}ing or they would {verb2} him. {name} tried to stop, but ultimately couldn't help but {verb1}. His friends then made good on their threat and {i}ed him.
+                Once upon a time, there were {number1} {noun1}. Of those, only one was {adj1}. This {noun1} was named {name}, and he liked to {verb1}. Every day, he would {adverb} {verb1} before even {ingVerb} his {bodypart}! Eventually, all his friends got fed up with his incessant {verb1}ing, and they issued an ultimatum: stop {verb1}ing or they would {verb2} him. {name} tried to stop, but ultimately couldn't help but {verb1}. His friends then made good on their threat and {verb2}ed him.
             </div>
         )
     }
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 

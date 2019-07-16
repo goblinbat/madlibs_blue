@@ -90,7 +90,7 @@ const Clown = (props) => {
                 <br />
 
                 <Label htmlFor="Verb2">Verb</Label>
-                <Input name="Verb2" value={Verb2} placeholder="verb" onChange={(e) => setVerb2(e.target.value)} />
+                <Input name="Verb2" value={verb2} placeholder="verb" onChange={(e) => setVerb2(e.target.value)} />
                 <br />
 
                 <Label htmlFor="adj4">Adjective </Label>
@@ -98,7 +98,7 @@ const Clown = (props) => {
                 <br />
 
                 <Label htmlFor="Verb3">Verb</Label>
-                <Input name="Verb3" value={Verb3} placeholder="verb" onChange={(e) => setVerb3(e.target.value)} />
+                <Input name="Verb3" value={verb3} placeholder="verb" onChange={(e) => setVerb3(e.target.value)} />
                 <br />
                  
                 <Label htmlFor="noun2">Noun</Label>
@@ -131,7 +131,7 @@ const Clown = (props) => {
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 

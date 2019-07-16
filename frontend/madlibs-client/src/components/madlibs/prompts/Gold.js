@@ -88,7 +88,7 @@ const Gold = (props) => {
                 <br />
                 
                 <Label htmlFor="building">Building </Label>
-                <Input name="building" value={building} placeholder="building" onChange={(e) => setBuiling(e.target.value)} />
+                <Input name="building" value={building} placeholder="building" onChange={(e) => setBuilding(e.target.value)} />
                 <br />
 
                 <Label htmlFor="noun2">Noun</Label>
@@ -190,7 +190,7 @@ const Gold = (props) => {
 
     return (
         <div>
-            {(!prompt) ? fillForm : Mprompt}
+            {(!prompt) ? fillForm() : Mprompt()}
         </div>
     )
 } 
