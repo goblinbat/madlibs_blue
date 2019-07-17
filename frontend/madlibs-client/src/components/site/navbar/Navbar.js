@@ -4,10 +4,17 @@
 //      Logout (build in here), Profile (User.js), Create Madlib (MadlibTerminal.js), and Read Madlib (ViewMadlib.js)
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const logout = () => {
+        localStorage.clear();
+        props.setSession(undefined);
+        console.log('logged out')
+    }
+
     return (
         <div>
-            NAVBAR
+            NAVBAR 
+            <button onClick={logout}> Logout</button>
         </div>
     )
 }

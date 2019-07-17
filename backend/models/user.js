@@ -16,6 +16,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         profile: {
             type: DataTypes.STRING,
+            allowNull: true
         }
     });
 };

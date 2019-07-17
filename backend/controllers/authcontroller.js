@@ -10,13 +10,12 @@ router.post('/signup', (req, res) => {
     const username = req.body.user.username;
     const email = req.body.user.email;
     const pass = req.body.user.password;
-    const profile = req.body.user.profile;
+    // const profile = req.body.user.profile;
 
     User.create({
         username: username,
         email: email,
-        password: bcrypt.hashSync(pass, 10),
-        profile: profile
+        password: bcrypt.hashSync(pass, 10)
     }).then(function createSuccess(user) {
         const token = jwt.sign({id:user.id}, process.env.JWT_SECRET, {expiresIn: 60*60*24});
         res.json({
